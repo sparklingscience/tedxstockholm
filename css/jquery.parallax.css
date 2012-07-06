@@ -1,0 +1,15 @@
+.parallax-viewport {
+    position: relative;     /* relative, absolute, fixed */
+    overflow: hidden;
+	width:100%;
+	height:85%;
+	margin:auto;
+	display:block;
+}
+.parallax-layer {
+    position: absolute;
+}
+
+#parallax{
+	min-height:300px;
+}

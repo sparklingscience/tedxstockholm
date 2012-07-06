@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; Charset=iso-8859-1" />
+<title>TedxStockholm</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.parallax.css" rel="stylesheet" type="text/css" />
+<link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.event.frame.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/lightbox.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32498027-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+	<div id="menu"><ul><li class="home">Home</li><li id="aboutted"><strong>About TED</strong></li><li id="aboutus">About Us</li><li id="contactus">Contact</li></ul></div>
+
+    <div class="parallax-viewport" id="parallax">
+        
+        <!-- parallax layers -->
+        <div class="parallax-layer">
+            <img id="backP" src="images/back.jpg" alt="" style="position:absolute; left:-800px; top:-570px;"/>
+        </div>
+        <div class="parallax-layer">
+            <img id="logoP" src="images/header.gif" alt="" style="margin: -200px auto auto -225px;" />
+        </div>
+    </div>
+    
+    <div id="content">
+	<img src="images/pageLogo.png" class="home" />
+    <div class="horizontalLine"></div>
+    <div class="pageloader"><img src="images/loader.gif" /></div>
+    	<div id="pageContainer">
+        </div>
+    <div class="clearfix"></div>
+    <div class="footer" id="footerPage">This independent TEDx event is operated under license from <a href="www.ted.com">TED</a>.</div>
+    </div>
+    
+	<div id="black_overlay">
+        <div id="loadingText">
+        <img src="images/headerSmall.png" /><br />
+            <img src="images/loader_bb.gif" align="top" style="margin-left:60px;" />&nbsp;&nbsp;Loading
+        </div>
+    </div>
+	
+    <div class="footer" id="footer">This independent TEDx event is operated under license from <a href="www.ted.com">TED</a>.</div>
+
+  <script>
+  $(document).ready(function(){
+    var ie = (function(){
+ 
+    var undef,
+        v = 3,
+        div = document.createElement('div'),
+        all = div.getElementsByTagName('i');
+ 
+    while (
+        div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+        all[0]
+    );
+ 
+    return v > 4 ? v : undef;
+ 
+	}());
+	
+	if(ie>=9){
+		//alert("good");
+		$('#parallax .parallax-layer')
+		.parallax({
+		  mouseport: jQuery('#parallax')
+		});
+	}
+	else if(ie===undefined){
+		//alert("HI! not ie");
+		$('#parallax .parallax-layer')
+		.parallax({
+		  mouseport: jQuery('#parallax')
+		});
+	}
+	else{
+		//alert("not good!");
+		$("#backP").css({left: '-100px', top:'-100px'});
+		$("#logoP").css({marginLeft: '60%', marginTop:'40%', display: 'block'});
+	}
+	
+	$(window).load(function(){
+								 $('#black_overlay').fadeOut("slow");
+								 });
+	
+	$('#menu ul li').click(function(){
+									 		var name = this.id;
+											$('.pageloader').fadeIn("slow");
+											$('body').css({background: '#FFF'});
+											$('body').css("overflow-y","scroll");
+											$('#parallax').fadeOut("slow");
+											$('#content').fadeIn(2000);
+											$('#footerPage').show();
+											$('#footer').hide();
+											$('#pageContainer').load('content/'+name+'.html', function(){ $('.pageloader').slideUp(500); }).fadeIn("slow");
+											if(name == 'aboutus'){
+												$('body').css({background: 'url(./images/backAboutus.jpg) no-repeat'});
+											}
+										 });
+	$('.home').click(function(){
+											$('#pageContainer').load('content/contactus.html');
+								   			$('#content').fadeOut('slow');
+											$('#parallax').fadeIn("slow");
+											$('#footerPage').hide();
+											$('#footer').show();
+											$('body').css({backgroundColor: '#000'});
+											$('body').css("overflow","hidden");
+										 });
+  });
+  </script>
+</body>
+</html>
