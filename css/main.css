@@ -33,27 +33,23 @@ body{
 	border-radius: 10px 10px 10px 10px;
 }
 
-#menu{
-	width:100%;
-	padding:10px;
+
+nav{
+	padding:20px;
 	background:#000;
+	width:100%;
 }
 
-#menu ul{
-	margin: 0px;
-}
-
-#menu ul li{
-	list-style:none;
-	display:inline-block;
+nav a{
 	color: #FFF;
 	background:#000;
 	padding:10px 20px;
 	font-size:16px;
 	margin-right:2px;
+	text-decoration:none;
 }
 
-#menu ul li:hover{
+nav a:hover{
 	background:#222;
 	cursor:pointer;
 }
@@ -77,17 +73,12 @@ body{
 }
 
 
-.footer{
+footer{
 	width:300px;
-	background:#DDD;
-	color:#555;
+	color:#777;
 	font-size:10px;
 	text-align:center;
 	margin:20px auto;
-	padding:10px;
-}
-
-#footer{
 	margin:auto;
 	width:100%;
 	height:4.4%;
