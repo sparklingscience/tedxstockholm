@@ -5,6 +5,15 @@
   font-family: robotoLight; 
   src: url('fonts/Roboto-Light.ttf'); 
 } 
+
+@font-face {
+  font-family: 'icons';
+  src: url("font/icons.eot");
+  src: url(".font/icons.eot?#iefix") format('embedded-opentype'), url("font/icons.woff") format('woff'), url("font/icons.ttf") format('truetype'), url("font/icons.svg#icons") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,html{
   height:100%;
 }

@@ -1,4 +1,47 @@
+
 <p>
 <h2>Careers </h2>
-Want to be associated with TedxStockholm?<br />
-<br />
+Want to be associated with TedxStockholm?<br /><br />
+<section class="main">
+
+    <div id="sb-container" class="sb-container">
+    
+        <div>
+            <h4><span>Public Relations</span></h4>
+        </div>
+        <div>
+            <h4><span>Logistics</span></h4>
+        </div>	
+        <div>
+            <h4><span>Web & Graphics</span></h4>
+        </div>	
+        <div>
+            <h4><span>Organisation</span></h4>
+        </div>	
+        <div>
+            <h4><span>Career</span></h4>
+            <span class="sb-toggle">Click to open/close</span>
+            <h7><span style="color:#F00;">TedxStockholm</span></h7>
+        </div>
+        
+        
+    </div><!-- sb-container -->
+    
+</section>
+
+<script>
+$(function() {
+			
+				$( '#sb-container' ).swatchbook( {
+					// number of degrees that is between each item
+					angleInc	: 15,
+					neighbor	: 15,
+					// if it should be closed by default
+					initclosed	: true,
+					// index of the element that when clicked, triggers the open/close function
+					// by default there is no such element
+					closeIdx	: 11
+				} );
+			
+			});
+</script>
