@@ -176,12 +176,11 @@ span.sb-toggle{
 	padding: 5px;
 	margin: 10px;
 	display: block;
-	color: #000;
+	color: #AAA;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 14px;
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.1);
 	text-align: center;
 }
 
