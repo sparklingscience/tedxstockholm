@@ -48,6 +48,11 @@ $(document).ready(function(){
 			$('body').css({background: 'url(./images/backAboutus.jpg) no-repeat', 'background-size':'cover'});
 			$('footer').css({background: '#FFF', padding: '10px', marginTop: '-10px'});
 		}
+		else if(name != 'home'){
+			$('body').css({backgroundColor: '#FFF'});
+			$('footer').css({background: '#FFF', padding: '10px', marginTop: '-10px'});
+		}
+		
 	});
 	
 	
