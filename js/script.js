@@ -61,6 +61,10 @@ $(document).ready(function(){
 		$('footer').css({background: '#000', padding: '0px', marginTop: '0px'});
 	});
 	
+	//Effects...
+//	$("a.offsite").live("hover", function(){ alert("Goodbye!"); });
+
+	
 	
 	//Functions...
 	
@@ -90,21 +94,5 @@ $(document).ready(function(){
 		);
 		return v > 4 ? v : undef;
 	}
-	
-	/*if ($("#sb-container").length > 0){
-		alert("hi");
-		 $( '#sb-container' ).swatchbook( {
-					// number of degrees that is between each item
-					angleInc	: 15,
-					neighbor	: 15,
-					// if it should be closed by default
-					initclosed	: true,
-					// index of the element that when clicked, triggers the open/close function
-					// by default there is no such element
-					closeIdx	: 11
-			});
-	}*/
-
-
 	
 });
